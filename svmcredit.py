@@ -15,6 +15,7 @@ dict = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8, 'i': 9,
     's': 19, 't': 20, 'u': 21, 'v': 22, 'w': 23, 'x': 24, 'y': 25, 'z': 26, 'aa': 27,
     'bb': 28, 'cc': 29, 'dd': 30, 'ee': 31, 'ff': 32, 'gg': 33 }
 
+df.loc[df['First Season'] > 1990, 'First Season'] = 1
 # replace
 df['a1'] = df['a1'].replace('?', 'z')
 df['a2'] = df['a2'].replace('?', -99999)

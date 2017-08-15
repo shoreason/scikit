@@ -2,11 +2,11 @@ from sklearn import cluster, datasets
 from matplotlib import pyplot
 import numpy as np
 
-k = 2
+k = 5
 
 iris = datasets.load_iris()
-# X_iris = iris.data
-X_iris = np.array([98, 80 , 78, 10, 5, 20, 46, 55, 60])
+X_iris = iris.data
+# X_iris = np.array([98, 80 , 78, 10, 5, 20, 46, 55, 60])
 y_iris = iris.target
 
 # print(X_iris)
@@ -14,7 +14,7 @@ y_iris = iris.target
 
 
 k_means = cluster.KMeans(n_clusters=k)
-k_means.fit(X_iris.reshape(-1, 1))
+k_means.fit(X_iris)
 
 labels = k_means.labels_
 centroids = k_means.cluster_centers_
